@@ -298,6 +298,59 @@ a {
   border: 1px dashed var(--line);
 }
 
+.nft-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.9rem;
+  margin: 1.2rem 0 0;
+  padding: 0;
+}
+
+.nft-card {
+  display: grid;
+  gap: 0.7rem;
+  padding: 0.7rem;
+  border-radius: 16px;
+  background: var(--bg-raised);
+  border: 1px solid var(--line);
+}
+
+.nft-card img,
+.nft-fallback {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 12px;
+  background:
+    radial-gradient(circle at 30% 20%, rgba(62, 240, 240, 0.35), transparent 55%),
+    radial-gradient(circle at 70% 80%, rgba(232, 76, 255, 0.35), transparent 50%),
+    #111111;
+}
+
+.nft-card span {
+  color: var(--brass);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.nft-card strong,
+.nft-card em {
+  display: block;
+}
+
+.nft-card strong {
+  margin-top: 0.2rem;
+  font-weight: 560;
+}
+
+.nft-card em {
+  color: var(--muted);
+  font-style: normal;
+  font-size: 0.85rem;
+}
+
 .hero-compact h1 {
   font-size: clamp(2.2rem, 5vw, 3.4rem);
 }
