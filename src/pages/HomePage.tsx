@@ -18,13 +18,13 @@ const modules = [
   {
     id: 'nft-holdings',
     name: 'NFT holdings',
-    status: 'Later',
+    status: 'In this repo',
     summary: 'Load the NFTs held by the connected address on the supported chains.',
   },
   {
     id: 'gallery',
     name: 'Gallery',
-    status: 'Later',
+    status: 'In this repo',
     summary: 'Present those holdings: image, name, collection, and chain.',
   },
 ]
