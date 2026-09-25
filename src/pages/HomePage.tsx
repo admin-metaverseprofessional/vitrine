@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { supportedChains } from '../shared/chains'
+import { studioContacts, studioUrl } from '../shared/studio'
 
 const modules = [
   {
@@ -32,19 +33,18 @@ export function HomePage() {
   return (
     <div className="page">
       <section className="hero">
-        <p className="eyebrow">Wallet NFT cabinet</p>
-        <h1>Every NFT you hold, in one vitrine.</h1>
+        <p className="eyebrow">Metaverse Professional</p>
+        <h1>Smarter systems. Faster growth.</h1>
         <p className="lede">
-          Connect MetaMask or Coinbase Wallet and see the tokens that wallet holds.
-          This repository is the foundation. Connection, loading, and the gallery
-          each land as their own module.
+          Vitrine is the studio portfolio for the NFTs Metaverse Professional holds.
+          Connect MetaMask or Coinbase Wallet and open the cabinet.
         </p>
         <div className="hero-actions">
           <Link className="button" to="/gallery">
             Open the gallery
           </Link>
-          <a className="text-link" href="https://github.com/admin-metaverseprofessional">
-            Project owner
+          <a className="text-link" href={studioUrl}>
+            Request Info / Book a Call
           </a>
         </div>
       </section>
@@ -68,6 +68,33 @@ export function HomePage() {
             </li>
           ))}
         </ol>
+      </section>
+
+      <section className="panel" id="find-us">
+        <div className="section-head">
+          <h2>Find Us</h2>
+          <p>Same places as the Metaverse Professional site.</p>
+        </div>
+        <ul className="chain-list">
+          {studioContacts.map((contact) => (
+            <li key={contact.name}>
+              <span>{contact.detail}</span>
+              <a href={contact.href}>
+                <strong>{contact.name}</strong>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="panel" id="contact">
+        <div className="section-head">
+          <h2>Contact</h2>
+          <p>Tell the studio about the work. The call books on the Metaverse Professional site.</p>
+        </div>
+        <a className="button" href={studioUrl}>
+          Request Info / Book a Call
+        </a>
       </section>
 
       <section className="panel">
