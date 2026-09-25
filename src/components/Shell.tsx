@@ -2,6 +2,7 @@ import { NavLink, Outlet } from 'react-router-dom'
 import { useWallet } from '../modules/wallet/WalletProvider'
 import { walletKindLabel, type WalletKind } from '../modules/wallet/types'
 import { chainName } from '../shared/chains'
+import { studioContacts, studioUrl } from '../shared/studio'
 
 function walletLabel(snapshot: ReturnType<typeof useWallet>['snapshot']) {
   if (snapshot.status === 'connected') {
@@ -26,14 +27,20 @@ export function Shell() {
   return (
     <div className="shell">
       <header className="topbar">
-        <NavLink to="/" className="wordmark" end>
-          Vitrine
+        <NavLink to="/" className="brand" end>
+          <img src="/logo.jpg" alt="Metaverse Professional" />
+          <span>
+            <strong>Metaverse Professional</strong>
+            <em>Vitrine</em>
+          </span>
         </NavLink>
         <nav className="nav">
           <NavLink to="/" end>
             Home
           </NavLink>
           <NavLink to="/gallery">Gallery</NavLink>
+          <a href="/#find-us">Find Us</a>
+          <a href="/#contact">Contact</a>
         </nav>
         <div className="wallet-slot">
           {showConnect
@@ -69,7 +76,17 @@ export function Shell() {
         <Outlet />
       </main>
       <footer className="footer">
-        <p>MetaMask and Coinbase Wallet. One cabinet for the NFTs they hold.</p>
+        <p>Smarter systems. Faster growth.</p>
+        <ul>
+          {studioContacts.map((contact) => (
+            <li key={contact.name}>
+              <a href={contact.href}>{contact.name}</a>
+            </li>
+          ))}
+          <li>
+            <a href={studioUrl}>Request Info / Book a Call</a>
+          </li>
+        </ul>
       </footer>
     </div>
   )
