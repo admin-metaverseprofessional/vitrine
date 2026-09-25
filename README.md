@@ -27,3 +27,6 @@ npm run build
 ## Modules
 
 See [docs/modules.md](docs/modules.md) for the module map and the acceptance criteria for the first bounty.
+
+Winner check for issue 4.
+
