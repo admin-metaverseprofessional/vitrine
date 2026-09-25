@@ -11,7 +11,7 @@ const modules = [
   {
     id: 'wallet-connect',
     name: 'Wallet connect',
-    status: 'Next module',
+    status: 'In this repo',
     summary: 'Connect MetaMask or Coinbase Wallet, show the address, and disconnect.',
   },
   {

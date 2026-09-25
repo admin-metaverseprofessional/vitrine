@@ -14,7 +14,7 @@ export function GalleryPage() {
         <p className="lede">
           {snapshot.status === 'connected'
             ? 'A wallet is connected. Holdings will appear here once the NFT module loads them.'
-            : 'Connect MetaMask or Coinbase Wallet to show the NFTs that address holds. Connection is the next module.'}
+            : 'Connect MetaMask or Coinbase Wallet to show the NFTs that address holds. Loading those NFTs is the next module.'}
         </p>
       </section>
 

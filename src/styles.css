@@ -69,14 +69,37 @@ a {
   color: var(--ink);
 }
 
-.wallet-chip {
+.wallet-slot {
   margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.wallet-chip {
+  margin: 0;
   padding: 0.4rem 0.75rem;
   border: 1px solid var(--line);
   border-radius: 999px;
   background: var(--chip);
   color: var(--muted);
   font-size: 0.85rem;
+}
+
+.wallet-button {
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 0.4rem 0.75rem;
+  cursor: pointer;
+}
+
+.wallet-button:disabled {
+  opacity: 0.55;
+  cursor: default;
 }
 
 .page {
@@ -265,7 +288,7 @@ a {
     gap: 0.75rem;
   }
 
-  .wallet-chip {
+  .wallet-slot {
     margin-left: 0;
   }
 }
