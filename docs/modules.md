@@ -5,7 +5,7 @@ Work lands one module at a time. The foundation stays in place. Later modules re
 | Module | Status | Seam |
 | --- | --- | --- |
 | Foundation | This repository | Shell, routes, `supportedChains`, wallet and gallery contracts |
-| `wallet-connect` | Next | Replace `WalletProvider` so `useWallet()` can connect MetaMask and Coinbase Wallet |
+| `wallet-connect` | In this repo | `useWallet().connect()` and `disconnect()` for MetaMask and Coinbase Wallet |
 | `nft-holdings` | After wallet | Fill `useNftHoldings()` for the connected address |
 | `gallery` | After holdings | Render `NftHolding` cards on `/gallery` |
 

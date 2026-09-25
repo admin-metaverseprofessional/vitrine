@@ -12,3 +12,7 @@ export const supportedChains: Chain[] = [
   { id: 42161, name: 'Arbitrum', shortName: 'ARB' },
   { id: 10, name: 'Optimism', shortName: 'OP' },
 ]
+
+export function chainName(chainId: number): string {
+  return supportedChains.find((chain) => chain.id === chainId)?.name ?? `chain ${chainId}`
+}
