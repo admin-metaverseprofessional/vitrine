@@ -30,3 +30,6 @@ See [docs/modules.md](docs/modules.md) for the module map and the acceptance cri
 
 Winner check for issue 4.
 
+
+Competing note for the NFT gallery.
+
